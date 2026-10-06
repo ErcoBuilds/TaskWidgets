@@ -4,7 +4,7 @@
 ![Python](https://img.shields.io/badge/Python-3-blue.svg)
 ![No dependencies](https://img.shields.io/badge/dependencies-none-success.svg)
 
-Ein schlankes Erinnerungs-Widget für den Windows-11-Desktop. Es zeigt Uhrzeit und
+Ein schlankes Erinnerungs-Widget für den Windows-10/11-Desktop. Es zeigt Uhrzeit und
 die nächsten Aufgaben direkt auf dem Bildschirm und meldet sich zur eingestellten Zeit
 mit einer Erinnerung und einem Ton. Ohne Installation, ohne Konto, läuft komplett lokal –
 geschrieben in reinem Python 3 mit `tkinter`, **ohne externe Pakete**.
