@@ -29,13 +29,13 @@ geschrieben in reinem Python 3 mit `tkinter`, **ohne externe Pakete**.
 
 ## Screenshots
 
-| Erinnerung | Aufgabe anlegen |
+| Aufgabe anlegen | Einstellungen |
 |:---:|:---:|
-| ![Erinnerung](docs/reminder.png) | ![Aufgaben-Editor](docs/editor.png) |
+| ![Aufgaben-Editor](docs/editor.png) | ![Einstellungen](docs/settings.png) |
 
-| Einstellungen | Alle Aufgaben |
+| Erinnerung | Alle Aufgaben |
 |:---:|:---:|
-| ![Einstellungen](docs/settings.png) | ![Alle Aufgaben](docs/tasks.png) |
+| ![Erinnerung](docs/reminder.png) | ![Alle Aufgaben](docs/tasks.png) |
 
 | Eigener Farbwähler mit Pipette |
 |:---:|
