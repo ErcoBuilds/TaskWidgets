@@ -8,7 +8,7 @@ Vorgehen transparent.
 ## Konzeption und Vorgaben
 
 Ausgangspunkt war ein klar umrissenes Ziel: ein ressourcenschonendes
-Erinnerungs-Widget für Windows 11, das vollständig lokal arbeitet. Die
+Erinnerungs-Widget für Windows 10/11, das vollständig lokal arbeitet. Die
 Rahmenbedingungen habe ich festgelegt und konsequent eingehalten:
 
 - reines Python 3 mit `tkinter`, keine externen Abhängigkeiten
