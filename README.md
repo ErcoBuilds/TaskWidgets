@@ -100,6 +100,15 @@ Dunkel verteilt `config.set_palette()` die neue Palette live an alle Module.
 - **Ein-/Ausblenden:** Linksklick auf das Symbol im Infobereich der Taskleiste
 - **Beenden:** Menü → Beenden
 
+## KI-Unterstützung
+
+Dieses Projekt ist mit KI-Unterstützung (Claude Code) entstanden. Idee,
+Funktionsumfang, Gestaltung und alle Entscheidungen stammen von mir; den Code
+habe ich gemeinsam mit der KI erarbeitet, geprüft und getestet.
+
+Wie ich dabei vorgegangen bin, welche Entscheidungen ich getroffen und wie ich
+die Ergebnisse geprüft habe, steht in [docs/KI-Entwicklungsprozess.md](docs/KI-Entwicklungsprozess.md).
+
 ## Credits
 
 Erstellt von **ErcoBuilds** · [GitHub: @ErcoBuilds](https://github.com/ErcoBuilds)
