@@ -5,7 +5,7 @@ die nächsten Aufgaben direkt auf dem Bildschirm und meldet sich zur eingestellt
 mit einer Erinnerung und einem Ton. Ohne Installation, ohne Konto, läuft komplett lokal –
 geschrieben in reinem Python 3 mit `tkinter`, **ohne externe Pakete**.
 
-![TaskWidgets](docs/screenshot.png)
+![TaskWidgets – Widget in hell und dunkel](docs/widget.png)
 
 ## Funktionen
 
@@ -22,6 +22,20 @@ geschrieben in reinem Python 3 mit `tkinter`, **ohne externe Pakete**.
 - 📌 Symbol im Infobereich der Taskleiste, frei verschieb- und skalierbar
 - 💾 Export / Import der Aufgaben für andere PCs
 - ⚙️ Alle Optionen gebündelt im Einstellungsfenster · Erststart-Assistent
+
+## Screenshots
+
+| Erinnerung | Aufgabe anlegen |
+|:---:|:---:|
+| ![Erinnerung](docs/reminder.png) | ![Aufgaben-Editor](docs/editor.png) |
+
+| Einstellungen | Alle Aufgaben |
+|:---:|:---:|
+| ![Einstellungen](docs/settings.png) | ![Alle Aufgaben](docs/tasks.png) |
+
+| Eigener Farbwähler mit Pipette |
+|:---:|
+| ![Farbwähler](docs/colorpicker.png) |
 
 ## Start aus dem Quellcode
 
