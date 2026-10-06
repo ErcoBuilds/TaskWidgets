@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# PyInstaller-Build
+build/
+dist/
+*.spec
+*.exe
+
+# Daten / Backups (nie committen)
+*.zip
+TaskWidgets_data_Backup_*.json
+data.json
+
+# OS / Editor
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
