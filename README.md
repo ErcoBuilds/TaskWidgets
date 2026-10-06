@@ -35,7 +35,7 @@ geschrieben in reinem Python 3 mit `tkinter`, **ohne externe Pakete**.
 
 | Erinnerung | Alle Aufgaben |
 |:---:|:---:|
-| ![Erinnerung](docs/reminder.png) | ![Alle Aufgaben](docs/tasks.png) |
+| ![Alle Aufgaben](docs/tasks.png) | ![Erinnerung](docs/reminder.png) |
 
 | Eigener Farbwähler mit Pipette |
 |:---:|
