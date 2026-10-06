@@ -1,58 +1,52 @@
-# KI-Unterstützung bei TaskWidgets
+# Entwicklungsprozess und KI-Einsatz
 
-## Überblick
+TaskWidgets wurde mit KI-Unterstützung (Claude Code) entwickelt. Konzept,
+Funktionsumfang und alle fachlichen Entscheidungen stammen von mir; die KI diente
+als Werkzeug für Umsetzung, Refactoring und Tests. Diese Seite dokumentiert das
+Vorgehen transparent.
 
-TaskWidgets habe ich mit KI-Unterstützung entwickelt (Claude Code). Die Idee,
-der Funktionsumfang, das Design und alle Entscheidungen stammen von mir. Den
-Code habe ich gemeinsam mit der KI erarbeitet; ich habe Ziele vorgegeben,
-Vorschläge bewertet, die Umsetzung freigegeben und die Ergebnisse geprüft.
+## Konzeption und Vorgaben
 
-Als Auszubildender zum Fachinformatiker für Anwendungsentwicklung nutze ich das
-Projekt, um die Werkzeuge und Abläufe einer modernen Entwicklung kennenzulernen
-und zu verstehen – nicht, um Code unbesehen zu übernehmen.
+Ausgangspunkt war ein klar umrissenes Ziel: ein ressourcenschonendes
+Erinnerungs-Widget für Windows 11, das vollständig lokal arbeitet. Die
+Rahmenbedingungen habe ich festgelegt und konsequent eingehalten:
 
-## Was von mir kam
+- reines Python 3 mit `tkinter`, keine externen Abhängigkeiten
+- deutschsprachige Oberfläche, Datenhaltung ausschließlich lokal in `%APPDATA%`
+- definierter Funktionsumfang (u. a. mehrere Uhrzeiten je Aufgabe, flexible
+  Wiederholungen, Ruhemodus, eigener Farbwähler mit Pipette, Export/Import)
+- Entscheidung für eine modulare Architektur und einen präsentablen Repo-Aufbau
 
-- Idee und Zweck: ein schlankes, lokales Erinnerungs-Widget für Windows 11
-- Funktionen: Uhr und nächste Aufgaben, Erinnerungen mit Ton, Wiederholungen,
-  mehrere Uhrzeiten pro Aufgabe, Ruhemodus, Verlauf, helles/dunkles Design,
-  eigene Farben mit Pipette, Export/Import, Tray-Symbol
-- Rahmenbedingungen: reines Python 3 mit `tkinter`, keine externen Pakete,
-  deutsche Oberfläche, Daten nur lokal in `%APPDATA%`
-- Entscheidungen im Ablauf: Aufteilung des Codes in Module, Aufbau fürs
-  GitHub-Profil, Auswahl und Gestaltung der Screenshots
+## Architektur
 
-## Ablauf
+Die ursprünglich monolithische Anwendung habe ich in fachlich getrennte Module
+überführen lassen (siehe „Projektaufbau" in der README), ohne das Verhalten zu
+verändern. Technische Kernfrage dabei: wie Zustand – konkret die Theme-Farben für
+Hell/Dunkel – zur Laufzeit konsistent an alle Module verteilt wird. Gelöst über
+einen zentralen Mechanismus in `config`, der neue Werte live an alle registrierten
+Module überträgt.
 
-Zuerst entstand eine funktionierende Einzeldatei. Danach habe ich den Code in
-klar getrennte Module aufteilen lassen (siehe „Projektaufbau" in der README),
-ohne das Verhalten zu ändern. Vor der Aufteilung habe ich eine Sicherung der
-laufenden Version angelegt und darauf bestanden, dass die aufgeteilte Version
-nachweislich genauso funktioniert.
+## Qualitätssicherung
 
-Anschließend habe ich das Projekt für GitHub vorbereitet: `.gitignore`, Lizenz,
-README mit Screenshots sowie die Git-Historie.
+Vor dem Refactoring wurde die lauffähige Version gesichert. Die modulare Fassung
+musste nachweislich verhaltensgleich sein. Die Tests liefen durchgängig gegen ein
+temporäres Datenverzeichnis, damit produktive Nutzerdaten unberührt blieben.
 
-## Prüfung der Änderungen
+Geprüft wurden u. a. Programmstart, Themenwechsel, Erinnerungen, Abhaken,
+Überspringen, Schlummern, Export/Import, Autostart und der Daten-Rundlauf. Am
+6. Oktober 2026 bestanden alle 16 automatisierten Tests sowie ein Kaltstart-Test
+als eigenständiger Prozess; ergänzend erfolgte eine manuelle Prüfung der
+Oberfläche.
 
-Die aufgeteilte Version wurde automatisiert getestet (Start ohne Oberfläche,
-Themenwechsel hell/dunkel, Erinnerungen, Abhaken, Überspringen, Schlummern,
-Export/Import, Autostart, Daten-Rundlauf). Alle Tests liefen gegen ein
-temporäres Datenverzeichnis, damit die echten Aufgaben unberührt blieben.
+## Eingesetzte Werkzeuge und Kompetenzen
 
-Am 6. Oktober 2026 bestanden alle 16 automatisierten Tests sowie ein separater
-Kaltstart-Test (Start als eigener Prozess). Zusätzlich habe ich die App selbst
-gestartet und die Oberfläche geprüft.
+Im Verlauf habe ich mit modularer Strukturierung, Zustandsverwaltung,
+Git-Versionierung sowie dem Build eigenständiger `.exe`-Dateien mit PyInstaller
+gearbeitet – einschließlich des bekannten False-Positive-Verhaltens von
+Virenscannern gegenüber PyInstaller-Binaries. Entscheidungen wie onedir gegen
+onefile habe ich bewusst abgewogen statt übernommen.
 
-## Was ich dabei gelernt habe
+---
 
-- Aufteilung eines größeren Programms in Module und sauberes Weitergeben von
-  Zustand (hier: die Theme-Farben) zwischen den Modulen
-- Grundlagen von Git: Commits, Historie, `.gitignore`
-- Erstellen einer eigenständigen `.exe` mit PyInstaller und der Umgang mit
-  einem bekannten Fehlalarm von Virenscannern (*False Positive*)
-- Aufbau einer aussagekräftigen README mit Screenshots
-
-## Hinweis
-
-Diese Seite beschreibt den Ablauf und ist kein vollständiges Gesprächsprotokoll.
+Diese Dokumentation beschreibt das Vorgehen und ist kein vollständiges
+Gesprächsprotokoll.
